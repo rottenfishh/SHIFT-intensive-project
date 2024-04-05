@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign language recognition</title>
+    <style>
+        /* CSS to center-align the form and prediction */
+        body {
+            text-align: center;  /* Center-align the content horizontally */
+        }
+        form {
+            margin: auto;  /* Center-align the form */
+            width: 50%;    /* Set the width of the form */
+            text-align: center;  /* Center-align the content within the form */
+        }
+        h2 {
+            margin-top: 20px;  /* Add some space between the form and the prediction */
+        }
+    </style>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sign language recognition</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <div id="ImageText">
+        <label for="image">Upload Image:</label>
+            <div id="Image">
+        <input type="file" name="image" accept="image/*"> <!-- Input for image file -->
+              </div>
+      </div>
+      
+      <div id="VideoText">  
+        <label for="video">Upload Video:</label>
+          <div id="Video">  
+        <input type="file" name="video" accept="video/*"> <!-- Input for video file -->
+          </div>
+      </div>
+        <h1> </h1>
+        
+        <input type="submit" value="Predict">
+         
+    </form>
+    <div id= "Predict"
+    {% if prediction %}
+    <h2>Translation into text: {{ prediction }}</h2>
+    {% endif %}
+     </div>
+
+     <p>Processing Time: {{ processing_time }} s</p>
+</body>
+</html>
