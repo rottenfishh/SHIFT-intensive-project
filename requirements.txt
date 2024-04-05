@@ -3,3 +3,4 @@ Flask
 opencv-python
 numpy
 pillow
+torchvision
