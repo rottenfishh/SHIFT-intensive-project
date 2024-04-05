@@ -1,0 +1,44 @@
+body {
+    font-family: Helvetica, sans-serif , Arial; 
+    background-color:#e8ebe3;
+    color:#8dad5f;
+    input::file-selector-button {
+      font-weight: curvsive;
+      color: #cfa772;
+      padding: 0.5em;
+      border: thin solid;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    input[type=submit]{
+        border: thin solid;
+        border-radius: 7px;
+        color: #cfa772;
+        padding: 6px 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+  
+ #VideoText{
+   padding-top: 30px;
+   font-size: 1.2rem;
+   color: #8b622d;
+ }
+ #ImageText{
+   font-size: 1.2rem;
+   color: #8b622d;
+ }
+
+#Video, #Image{
+  padding-top: 10px;
+  color: #90ca3e;
+}
+
+#Predict {
+  padding-top: 15px;
+  font-size: 1.2rem;
+  color: #664f31;
+}
